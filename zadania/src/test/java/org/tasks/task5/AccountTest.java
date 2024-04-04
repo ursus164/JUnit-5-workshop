@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 // 1. Open terminal in your IDE (you should be in the ROOT directory of the project - "zadania")
 
-// 2. Type the following command: "mvn clean test" and press enter -> Note that all previous tests should be positive.
+// 2. Type the following command: "mvn clean test" and press enter -> Note that all previous tests should be positive to do that task.
 
 // 3. After the tests are successfully executed, you can check the test coverage by opening the following file in your browser:
 //    target/site/jacoco/index.html (do it simply by right-clicking on the file and selecting "Open in Browser")
