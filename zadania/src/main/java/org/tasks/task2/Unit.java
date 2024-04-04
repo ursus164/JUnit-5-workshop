@@ -5,17 +5,10 @@ import java.util.List;
 
 public class Unit {
     private List<Cargo> cargo;
-    private int fuel;
-
-
-
-    private int maxFuel;
     private int maxCargoWeight;
     private int currentCargoWeight;
 
-    public Unit(int maxFuel, int maxCargoWeight) {
-        this.maxFuel = maxFuel;
-        this.fuel = maxFuel;
+    public Unit(int maxCargoWeight) {
         this.maxCargoWeight = maxCargoWeight;
         this.currentCargoWeight = 0;
         this.cargo = new ArrayList<>();

@@ -11,17 +11,17 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 // Here we have the basic set of tests for the Account class, including checking constructors, and methods.
 // Your goal is to implement the missing test for the Account class. If you want to know what
-// is the current test coverage for the Account class, you can do following steps:
+// is the current test coverage for the Account class, you can do the following steps:
 
 // 1. Open terminal in your IDE (you should be in the ROOT directory of the project - "zadania")
 
-// 2. Type following command: "mvn clean test" and press enter -> Note that all previous test should be positive.
+// 2. Type the following command: "mvn clean test" and press enter -> Note that all previous tests should be positive.
 
 // 3. After the tests are successfully executed, you can check the test coverage by opening the following file in your browser:
 //    target/site/jacoco/index.html (do it simply by right-clicking on the file and selecting "Open in Browser")
 
-// 4. Once you enter the report, you can navigate to the "org.tasks.task5" , then "Account" class and then one of provided methods -
-//    for example "setEmail".
+// 4. Once you enter the report, you can navigate to the "org.tasks.task5" , then "Account" class and then one of the provided methods -
+//    for example, "setEmail".
 
 // 5. You will see the actual test coverage of the current set of tests. Green color means that the line is covered by the test/ tests,
 //    while red color means that the line is not covered.

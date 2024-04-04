@@ -7,7 +7,7 @@ package org.tasks.task5;
 // When setting user email , application validates if it is in correct format (by regular expression).
 // If so, account email is set to provided email. If not, IllegalArgumentException is thrown.
 //
-// In package "test/java/org/tasks/task4" you will find a test class with initial tests for this class.
+// In package "test/java/org/tasks/task5" you will find a test class with initial tests for this class.
 // However, some of them are missing. Get familiar with structure, and methods of "Account" and "Address" classes provided
 // in this package and then navigate to corresponding test class for the rest of the task.
 
