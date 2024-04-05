@@ -23,6 +23,8 @@ Below is a brief overview of the tasks:
 To get started, fork this repository to your local machine and navigate to the project directory. Create a new branch when working on each task (e.g `git checkout -b task_1_fix` , `git checkout -b task_2_fix` ...). - you can do it in the project folder via IDE terminal. Each task is in its respective folder along with instructions on what to do. 
 When you complete the task, you can check if your solution is correct by making pull request to the main repository -  `git add .` , then `git commit -am "bugfix"` and `git push`. In console you will see link to create `pull request` - click on it. When `pull request` is created GitHub will show you if all tests pass ("are green") .Feel free to reach out if you have any questions.
 
+`Using IntelliJ is recommended, but you can use any IDE you want`
+
 ## How to Run Tests
 The tests for each task are provided in the `tests` folder within each task's directory. To run the tests, follow these steps:
 
