@@ -31,7 +31,9 @@ You can do it by executing `mvn test -Dtest="NameOfTestClass"` command in consol
 
 ### 2. Work with testing automation based on GitHub workflows - as in real life.
   
-After completing each task, you can check if tests are "green". However, usually in production repository some sort of workflow will be implemented. For example addtional verification if code provided by each programmer is correct. If so, it can be automaticlly merged into main branch (after approval). To get started, fork this repository to your local machine and navigate to the project directory. 
+After completing each task, you can check if tests are "green". However, usually in production repository, some sort of integration workflow will be implemented. For example, we can add extra verification by GIT if some bugfix or commit is pushed into the branch - better not trust "Mr. Smith" that every test passes succesfully. Automatic code verification is more trustworthy. If your code passes that verification it can be automaticlly merged into main branch (after approval). 
+
+`To get started, fork this repository to your local machine and navigate to the project directory. `
 
 ![image](https://github.com/ursus164/ProjectJPWP/assets/101526933/9f70c5c7-8c66-4bac-b5d9-f8dc03bcc17f)
 
