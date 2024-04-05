@@ -23,12 +23,12 @@ public class CalculatorTest {
         assertEquals(6, calculator.multiply(2, 3));
         assertEquals(0, calculator.multiply(0, 10));
     }
-    //
-//    @Test
-//    public void testdivide(){
-//        Calculator calculator = new Calculator();
-//        assertEquals(2,calculator.divide(8,4));
-//    }
+
+    @Test
+    public void testdivide(){
+        Calculator calculator = new Calculator();
+        assertEquals(2,calculator.divide(8,4));
+    }
 
     @Test
     public void testPower() {
