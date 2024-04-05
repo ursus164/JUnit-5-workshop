@@ -1,5 +1,5 @@
 Dear Student,
-You are provided with 5 simple tasks to complete. Tasks are based on real-life classes taken from bigger projects.
+You are provided with five simple tasks to complete. Tasks are based on real-life classes taken from bigger projects.
 Their main focus is to help you understand how the unit-testing works. You will get familiar with good practises of
 writing unit-tests, creating proper and informative names for tests, and finally how to write a good test,
 and debug errors.
