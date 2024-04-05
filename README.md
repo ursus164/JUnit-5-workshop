@@ -24,9 +24,7 @@ You can do tasks in two ways:
 
 1. Work in your own IDE, and check if tests are passing. You can do it by executing `mvn test -Dtest="NameOfTestClass"` command in console.
 
-2. Work with testing automation based on GitHub workflows - as in real life. After completing each task, you can check if tests are "green". However, usually in production repository some sort of workflow will be implemented. For example addtional verification if code provided by each programmer is correct. If so, it can be automaticlly merged into main branch (after approval).
-   
-To get started, fork this repository to your local machine and navigate to the project directory. Create a new branch when working on each task (e.g `git checkout -b task_1_fix` , `git checkout -b task_2_fix` ...). - you can do it in the project folder via IDE terminal. Each task is in its respective folder along with instructions on what to do. 
+2. Work with testing automation based on GitHub workflows - as in real life. After completing each task, you can check if tests are "green". However, usually in production repository some sort of workflow will be implemented. For example addtional verification if code provided by each programmer is correct. If so, it can be automaticlly merged into main branch (after approval). To get started, fork this repository to your local machine and navigate to the project directory. Create a new branch when working on each task (e.g `git checkout -b task_1_fix` , `git checkout -b task_2_fix` ...). - you can do it in the project folder via IDE terminal. Each task is in its respective folder along with instructions on what to do. 
 When you complete the task, you can check if your solution is correct by making pull request to the main repository -  `git add .` , then `git commit -am "bugfix"` and `git push`. In console you will see link to create `pull request` - click on it. When `pull request` is created GitHub will show you if all tests pass ("are green") .Feel free to reach out if you have any questions.
 
 `Using IntelliJ is recommended, but you can use any IDE you want`
