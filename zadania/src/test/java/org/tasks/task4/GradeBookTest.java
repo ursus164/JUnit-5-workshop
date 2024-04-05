@@ -1,10 +1,5 @@
 package org.tasks.task4;
 
-// Here we have the basic set of tests for the GradeBook class.
-// Your goal is to refactor the tests that raise exceptions. For this purpose,
-// the executable function interface will be helpful to make the test green - check the documentation
-// for usage of this interface in the assertions.
-
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
@@ -18,6 +13,12 @@ import static org.hamcrest.Matchers.equalTo;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
+
+// Here we have the basic set of tests for the GradeBook class.
+// Your goal is to refactor the tests that raise exceptions. For this purpose,
+// the executable function interface will be helpful to make the test green - check the documentation
+// for usage of this interface in the assertions.
+
 public class GradeBookTest {
     private GradeBook gradeBook;
 
@@ -30,15 +31,18 @@ public class GradeBookTest {
     void addSubject_ThrowsIllegalArgumentException_IfSubjectAlreadyExists() {
         gradeBook.addSubject("Math");
 
-        // Using executable function interface may be helpful to do this task
-        //Executable executable = () -> gradeBook.addSubject("Math");
+        // Using executable function interface may be helpful to do this task.
+        // However, we have to pass somewhere that function...
+
+        //Executable executable = () -> gradeBook."tested_method...";
     }
 
     @Test
     void getSubject_ThrowsIllegalArgumentException_IfSubjectDoesNotExist() {
         // Tutaj używamy interfejsu funkcyjnego Executable do sprawdzenia, czy pobranie nieistniejącego przedmiotu rzuci wyjątek IllegalArgumentException
          gradeBook.getSubject("Physics");
-        Executable executable = () -> gradeBook.getSubject("NonExistingSubject");
+
+//        Executable executable = () -> gradeBook."tested_method...";
     }
 
     @Test
@@ -59,6 +63,6 @@ public class GradeBookTest {
         gradeBook.addNote("Math", 3.5);
         gradeBook.addNote("Physics", 3.0);
 
-        assertEquals(3.375, gradeBook.getAverageNote());
+        assertThat(gradeBook.getAverageNote(), equalTo(3.5));
     }
 }

@@ -6,5 +6,5 @@ Given class represents an GradeBook, which is used to manage subjects and their 
 - getAverageNote: Calculates and returns the average grade across all subjects in the grade book
 
 In package "test/java/org/tasks/task4" you will find a test class with initial tests.
-However, some of them ends in failure. Get familiar with structure, and methods of "GradeBook" and "Subject" classes provided
-in this package and then navigate to corresponding test class in "test/java/org/tasks/task4" for the rest of the task.
+However, some of them ends in failure. Get familiar with the structure and methods of "GradeBook" and "Subject" classes provided
+in this package and then navigate to the corresponding test class in "test/java/org/tasks/task4" for the rest of the task.
