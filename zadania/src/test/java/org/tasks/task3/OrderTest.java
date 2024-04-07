@@ -19,7 +19,6 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 // You can check the documentation for more information about the usage of these decorators.
 
-
 // Your task is to refactor the code below by using @BeforeEach and @AfterEach decorator to get all tests green.
 
 // The Order class represents an order containing a list of Meal objects.
@@ -36,17 +35,25 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 public class OrderTest  {
 
+    private Order order;
+
+    @BeforeEach
+    void setUp() {
+        order = new Order();
+    }
+
+    @AfterEach
+    void cleanUp(){
+        order.clearMeals();
+    }
+
     @Test
     void mealListShouldBeEmptyAfterCreationOfOrder() {
-        Order order = new Order();
-
         assertThat(order.getMeals(), is(empty()));
     }
 
     @Test
     void mealListShouldBeEmptyAfterAddingMealToOrder(){
-        Order order = new Order();
-
         Meal meal = new Meal(15, "Burger");
 
         order.addMealToOrder(meal);
@@ -56,8 +63,6 @@ public class OrderTest  {
     }
     @Test
     void emptyOrderTotalCountOfMealsShouldEqualZero() {
-        Order order = new Order();
-
         assertThat(Order.countmeal_f, is(equalTo(0)));
     }
 
@@ -66,8 +71,6 @@ public class OrderTest  {
         Meal meal = new Meal(15, "Burger");
         Meal meal2 = new Meal(27, "Sandwich");
 
-        Order order = new Order();
-
         order.addMealToOrder(meal);
         order.addMealToOrder(meal2);
 
@@ -75,7 +78,6 @@ public class OrderTest  {
     }
     @Test
     void removeMealFromOrderShouldDecreaseOrderSize() {
-        Order order = new Order();
 
         Meal meal = new Meal(15, "Burger");
         Meal meal2 = new Meal(27, "Sandwich");
@@ -87,8 +89,6 @@ public class OrderTest  {
     }
     @Test
     void orderTotalPriceShouldNotExceedMaxIntValue() {
-        Order order = new Order();
-
 
         Meal meal = new Meal(Integer.MAX_VALUE, "Burger");
         Meal meal2 = new Meal(Integer.MAX_VALUE, "Sandwich");
@@ -109,7 +109,6 @@ public class OrderTest  {
     @Test
     void cancelingOrderShouldRemoveAllItemsFromMealsList() {
 
-       Order order = new Order();
 
         Meal meal = new Meal(15, "Burger");
         Meal meal2 = new Meal(27, "Sandwich");

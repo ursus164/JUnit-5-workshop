@@ -8,15 +8,19 @@ import static org.junit.jupiter.api.Assertions.assertThrows;
 
 class UnitTest {
 
+    @Test
+    void testUnitLoadAdterCreation(){
+        Unit unit = new Unit(100);
+        assertThat(unit.calculateCurrentWeight(), equalTo(0));
+    }
 
     @Test
-    void testIfUnitLoadAfterCreationIsEqualToZeroAndUnitWeightAfterLoadingIsCorrect() {
+    void testWeightAfterLoading() {
         Unit unit = new Unit(100);
         unit.loadCargo(new Cargo("Cargo1", 45));
-
-        assertThat(unit.calculateCurrentWeight(), equalTo(0));
         assertThat(unit.calculateCurrentWeight(), equalTo(45));
     }
+
 
     @Test
     void unitWeightAfterUnloadingCargoAndUnloadingAllAndUnloadingNotExistingShouldBeCorrect() {
@@ -37,17 +41,21 @@ class UnitTest {
         assertThat(unit.getCargo().size(), equalTo(0));
 
     }
+
     @Test
-    void unitShouldThrowExceptionWhenCargoWeightExceedsMaxWeightAndCheckIfCorrectCargoIsOnVessel() {
+    void testWhenCargoWeightExceedsMax(){
         Unit unit = new Unit( 100);
-
-        assertThat(unit.calculateCurrentWeight(), equalTo(101));
-
         Cargo cargo = new Cargo("Cargo", 101);
 
+        assertThrows(IllegalStateException.class, () -> unit.loadCargo(cargo));
+    }
+    @Test
+    void checkIfCorrectCargoIsOnVessel() {
+        Unit unit = new Unit( 100);
+        Cargo cargo = new Cargo("Cargo", 101);
         unit.loadCargo(cargo);
+
         assertThat(unit.getCargo().get(0), equalTo(cargo));
 
-        assertThrows(IllegalStateException.class, () -> unit.loadCargo(cargo));
     }
 }
