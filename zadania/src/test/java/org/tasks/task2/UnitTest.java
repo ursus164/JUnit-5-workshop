@@ -1,6 +1,7 @@
 package org.tasks.task2;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.function.Executable;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
@@ -19,7 +20,7 @@ class UnitTest {
     }
 
     @Test
-    void unitWeightAfterUnloadingCargoAndUnloadingAllAndUnloadingNotExistingShouldBeCorrect() {
+    void unitWeightAfterUnloadingCargoAndUnloadingAllShouldBeCorrect() {
         Unit unit = new Unit( 100);
 
         Cargo cargo = new Cargo("Cargo", 45);
@@ -38,16 +39,15 @@ class UnitTest {
 
     }
     @Test
-    void unitShouldThrowExceptionWhenCargoWeightExceedsMaxWeightAndCheckIfCorrectCargoIsOnVessel() {
+    void exceptionShouldBeThrownWhenCargoWeightExceedsMaxWeightAndCheckIfCorrectCargoIsOnVessel() {
         Unit unit = new Unit( 100);
 
-        assertThat(unit.calculateCurrentWeight(), equalTo(101));
+        Cargo overSizeCargo = new Cargo("Cargo", 101);
+        Cargo normalSizeCargo = new Cargo("Wood", 20);
 
-        Cargo cargo = new Cargo("Cargo", 101);
+        Executable executableOversize = () -> unit.loadCargo(overSizeCargo);    // loading
 
-        unit.loadCargo(cargo);
-        assertThat(unit.getCargo().get(0), equalTo(cargo));
-
-        assertThrows(IllegalStateException.class, () -> unit.loadCargo(cargo));
+        assertThat(unit.getCargo().get(0), equalTo(normalSizeCargo));
+        assertThrows(IllegalStateException.class, executableOversize);
     }
 }

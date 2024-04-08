@@ -41,8 +41,6 @@ public class GradeBookTest {
     void getSubject_ThrowsIllegalArgumentException_IfSubjectDoesNotExist() {
         // Tutaj używamy interfejsu funkcyjnego Executable do sprawdzenia, czy pobranie nieistniejącego przedmiotu rzuci wyjątek IllegalArgumentException
          gradeBook.getSubject("Physics");
-
-//        Executable executable = () -> gradeBook."tested_method...";
     }
 
     @Test
