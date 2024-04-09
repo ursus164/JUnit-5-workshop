@@ -72,7 +72,3 @@ The tests for each task are provided in the `tests` folder within each task's di
 2. Open a terminal or command prompt in that folder
 3. Run the command to execute the tests (e.g., `mvn test -Dtest="NameOfTestClass"`)
 
-## Need Help?
-If you encounter any difficulties or have questions, do not hesitate to ask! Feel free to create an issue in this repository, and I'll be happy to assist you.
-
-Good luck with the tasks, and happy testing! 🚀
