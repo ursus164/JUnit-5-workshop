@@ -15,11 +15,7 @@ public class Calculator {
     }
 
     public int multiply(int a, int b) {
-        int result = 0;
-        for (int i = 1; i < a; i++) {
-            result += b;
-        }
-        return result;
+        return a*b;
     }
 
     public int divide(int a, int b){
