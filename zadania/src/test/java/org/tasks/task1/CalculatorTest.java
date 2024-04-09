@@ -24,10 +24,25 @@ public class CalculatorTest {
         assertEquals(0, calculator.multiply(0, 10));
     }
     //
+    @Test
+    public void testDivide() {
+        Calculator calculator = new Calculator();
+        assertEquals(2, calculator.divide(8, 4));
+        assertEquals(7, calculator.divide(7, 1));
+    }
 
     @Test
     public void testPower() {
         Calculator calculator = new Calculator();
         assertEquals(8, calculator.power(2, 3));
+        assertEquals(1, calculator.power(2, 0));
     }
+
+    @Test
+    public void testFactorial() {
+        Calculator calculator = new Calculator();
+        assertEquals(120, calculator.factorial(5));
+        assertEquals(1, calculator.factorial(0));
+    }
+
 }
